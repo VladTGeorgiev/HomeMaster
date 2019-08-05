@@ -9,7 +9,7 @@ class ApplicationController < ActionController::API
     def decode_token(token)
         JWT.decode(token, ENV['RAILS_SECRET'])[0]
     end
-    ​
+
     def get_token
         request.headers["Authorization"] || request.headers["Authorisation"]
     end
@@ -23,7 +23,7 @@ class ApplicationController < ActionController::API
             @current_user = nil
         end
     end
-    ​
+
     def logged_in
         !!@current_user
     end
