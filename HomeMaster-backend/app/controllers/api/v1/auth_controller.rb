@@ -8,6 +8,31 @@ class Api::V1::AuthController < ApplicationController
         else
             render json: { message: 'Invalid email or password' }, status: :unauthorized
         end
+        # byebug
+    end
+
+    def data
+        user = @current_user
+        current_home = User.find(user.id).home
+        current_bills = Bill.all.select do |bill| 
+            bill.home_id === user.home.id
+        end
+        current_tasks = Task.all.select do |task|
+            task.home_id === user.home.id
+        end
+        current_essentials = Essential.all.select do |essentail|
+            essentail.home_id === user.home.id
+        end
+        if user
+            render json: {
+                home: current_home, 
+                bills: current_bills,
+                tasks: current_tasks,
+                essentials: current_essentials
+            }
+        else
+            render json: {error: "Data Not Avaliable"}
+        end
     end
 
     def validate

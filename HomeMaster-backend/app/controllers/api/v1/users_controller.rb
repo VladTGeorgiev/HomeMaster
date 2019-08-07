@@ -5,10 +5,15 @@ class Api::V1::UsersController < ApplicationController
         render json: User.all
     end
 
+    def show
+        user = User.find(params[:id])
+        render json: { user: UserSerializer.new(user) }
+    end
+
     def create
         user = User.create(user_params)
         if user.valid?
-            render json: { user: UserSerializer.new(user), token: issue_token(user_id: user.id) }, status: :created
+            render json: { user: UserSerializer.new(user), token: issue_token(user_id: user.id)}, status: :created
         else
             render json: { errors: user.errors.full_messages }, status: :not_accepted
         end

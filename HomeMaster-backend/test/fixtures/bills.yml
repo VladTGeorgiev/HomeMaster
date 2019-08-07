@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  total: 1.5
+  date_due: 2019-08-06
+  home: one
+
+two:
+  name: MyString
+  total: 1.5
+  date_due: 2019-08-06
+  home: two
