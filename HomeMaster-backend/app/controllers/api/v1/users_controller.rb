@@ -19,6 +19,24 @@ class Api::V1::UsersController < ApplicationController
         end
     end
 
+    def update
+        if @current_user.id === params[:id].to_i
+            @current_user.update(user_params)
+            render json: { user: UserSerializer.new(@current_user), token: issue_token(user_id: @current_user.id)}, status: :created
+        else
+          render json: { errors: @current_usererrors.full_messages }, status: :not_accepted
+        end
+    end
+
+    def destroy
+        if @current_user.id === params[:id].to_i
+            @current_user.destroy
+            render json: { message: 'User Successfully deleted'}, status: :created
+        else
+          render json: { errors: @current_usererrors.full_messages }, status: :not_accepted
+        end
+    end
+
     private 
 
     def user_params

@@ -28,10 +28,6 @@ class ApplicationController < ActionController::API
         !!@current_user
     end
 
-    # def present
-    #     logged_in && @current_user.home_id
-    # end
-
     def authorize
         if !logged_in
             return render json: { error: 'you must be logged in'}, status: :unauthorized

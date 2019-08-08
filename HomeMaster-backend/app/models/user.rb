@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   belongs_to :home
-  has_many :billsplits
+  has_many :billsplits, dependent: :destroy 
   has_many :bills, through: :billsplits
   has_many :tasks
   has_secure_password
