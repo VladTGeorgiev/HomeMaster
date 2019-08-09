@@ -20,10 +20,10 @@ class Api::V1::AuthController < ApplicationController
             bill.home_id === user.home.id
         end
         current_bill_splits = BillSplit.all.select do |billsplit| 
-            billsplit.home_id === user.home.id
+            billsplit.user_id === user.id
         end
         current_tasks = Task.all.select do |task|
-            task.home_id === user.home.id
+            task.user_id === user.id
         end
         current_essentials = Essential.all.select do |essentail|
             essentail.home_id === user.home.id
