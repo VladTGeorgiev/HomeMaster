@@ -50,27 +50,25 @@ Bill.create(name: 'Electricity', total: 35.94, date_due: '2019/08/18', home_id: 
 Bill.create(name: 'Water', total: 25.90, date_due: '2019/08/29', home_id: 4)
 
 
-BillSplit.create(paid: false, amount: 525, home_id: 1, user_id: 1)
-BillSplit.create(paid: true, amount: 22.38, home_id: 1, user_id: 1)
-BillSplit.create(paid: false, amount: 27.63, home_id: 1, user_id: 1)
-BillSplit.create(paid: false, amount: 7.55, home_id: 1, user_id: 1)
+BillSplit.create(paid: false, amount: 525, bill_id: 1, user_id: 1)
+BillSplit.create(paid: true, amount: 22.38, bill_id: 2, user_id: 1)
+BillSplit.create(paid: false, amount: 27.63, bill_id: 3, user_id: 1)
+BillSplit.create(paid: false, amount: 7.55, bill_id: 4, user_id: 1)
 
-BillSplit.create(paid: false, amount: 525, home_id: 1, user_id: 2)
-BillSplit.create(paid: true, amount: 22.38, home_id: 1, user_id: 2)
-BillSplit.create(paid: false, amount: 27.63, home_id: 1, user_id: 2)
-BillSplit.create(paid: false, amount: 7.55, home_id: 1, user_id: 2)
+BillSplit.create(paid: false, amount: 525, bill_id: 1, user_id: 2)
+BillSplit.create(paid: true, amount: 22.38, bill_id: 2, user_id: 2)
+BillSplit.create(paid: false, amount: 27.63, bill_id: 3, user_id: 2)
+BillSplit.create(paid: false, amount: 7.55, bill_id: 4, user_id: 2)
 
-BillSplit.create(paid: false, amount: 525, home_id: 1, user_id: 3)
-BillSplit.create(paid: true, amount: 22.38, home_id: 1, user_id: 3)
-BillSplit.create(paid: false, amount: 27.63, home_id: 1, user_id: 3)
-BillSplit.create(paid: false, amount: 7.55, home_id: 1, user_id: 3)
+BillSplit.create(paid: false, amount: 525, bill_id: 1, user_id: 3)
+BillSplit.create(paid: true, amount: 22.38, bill_id: 2, user_id: 3)
+BillSplit.create(paid: false, amount: 27.63, bill_id: 3, user_id: 3)
+BillSplit.create(paid: false, amount: 7.55, bill_id: 4, user_id: 3)
 
-BillSplit.create(paid: false, amount: 525, home_id: 1, user_id: 4)
-BillSplit.create(paid: true, amount: 22.38, home_id: 1, user_id: 4)
-BillSplit.create(paid: false, amount: 27.63, home_id: 1, user_id: 4)
-BillSplit.create(paid: false, amount: 7.55, home_id: 1, user_id: 4)
-
-# BillSplit.create(paid: false, amount: 525, home_id: 4, user_id: 12)
+BillSplit.create(paid: false, amount: 525, bill_id: 1, user_id: 4)
+BillSplit.create(paid: true, amount: 22.38, bill_id: 2, user_id: 4)
+BillSplit.create(paid: false, amount: 27.63, bill_id: 3, user_id: 4)
+BillSplit.create(paid: false, amount: 7.55, bill_id: 4, user_id: 4)
 
 
 Task.create(name: 'Laundry', description: 'Do the laundry', date_due: '2019/08/12', completed: false, home_id: 1, user_id: 1)

@@ -39,11 +39,11 @@ ActiveRecord::Schema.define(version: 2019_08_06_141015) do
   create_table "bill_splits", force: :cascade do |t|
     t.boolean "paid"
     t.float "amount"
-    t.bigint "home_id"
+    t.bigint "bill_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["home_id"], name: "index_bill_splits_on_home_id"
+    t.index ["bill_id"], name: "index_bill_splits_on_bill_id"
     t.index ["user_id"], name: "index_bill_splits_on_user_id"
   end
 
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_141015) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "bill_splits", "homes"
+  add_foreign_key "bill_splits", "bills"
   add_foreign_key "bill_splits", "users"
   add_foreign_key "bills", "homes"
   add_foreign_key "essentials", "homes"

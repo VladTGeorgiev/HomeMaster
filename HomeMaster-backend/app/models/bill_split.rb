@@ -1,4 +1,4 @@
 class BillSplit < ApplicationRecord
-  belongs_to :home
+  belongs_to :bill
   belongs_to :user
 end
