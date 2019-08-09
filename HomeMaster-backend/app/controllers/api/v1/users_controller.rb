@@ -30,7 +30,7 @@ class Api::V1::UsersController < ApplicationController
 
     def destroy
         if @current_user.id === params[:id].to_i
-            @current_user.destroy
+            @current_user.delete
             render json: { message: 'User Successfully deleted'}, status: :created
         else
           render json: { errors: @current_usererrors.full_messages }, status: :not_accepted
