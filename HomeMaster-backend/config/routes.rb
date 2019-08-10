@@ -9,7 +9,7 @@ Rails.application.routes.draw do
         # resources :bills
         # resources :billsplits
         # resources :tasks
-        # resources :essentials
+        resources :essentials
     end
   end
 end

@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_141015) do
 
   create_table "bills", force: :cascade do |t|
     t.string "name"
+    t.string "img"
     t.float "total"
     t.date "date_due"
     t.bigint "home_id"
@@ -80,6 +81,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_141015) do
   create_table "tasks", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "img"
     t.date "date_due"
     t.boolean "completed"
     t.bigint "home_id"

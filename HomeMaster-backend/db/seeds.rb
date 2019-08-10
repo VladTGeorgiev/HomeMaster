@@ -29,25 +29,25 @@ User.create(email:'e@e.com', password:'123', first_name: 'Elizabeth', last_name:
 User.create(email:'f@f.com', password:'123', first_name: 'Felix', last_name: 'Felix', home_id: 4)
 
 
-Bill.create(name: 'Rent', total: 2100, date_due: '2019/08/28', home_id: 1)
-Bill.create(name: 'Gas', total: 89.55, date_due: '2019/08/25', home_id: 1)
-Bill.create(name: 'Electricity', total: 110.50, date_due: '2019/08/25', home_id: 1)
-Bill.create(name: 'Water', total: 30.20, date_due: '2019/08/14', home_id: 1)
+Bill.create(name: 'Rent', total: 2100, date_due: '2019/08/28', home_id: 1, img: '../app/assets/save-money.png')
+Bill.create(name: 'Gas', total: 89.55, date_due: '2019/08/25', home_id: 1, img: '../app/assets/gas.png')
+Bill.create(name: 'Electricity', total: 110.50, date_due: '2019/08/25', home_id: 1, img: '../app/assets/flash.png')
+Bill.create(name: 'Water', total: 30.20, date_due: '2019/08/14', home_id: 1, img: '../app/assets/drop.png')
 
-Bill.create(name: 'Rent', total: 1850, date_due: '2019/08/30', home_id: 2)
-Bill.create(name: 'Gas', total: 35.90, date_due: '2019/08/30', home_id: 2)
-Bill.create(name: 'Electricity', total: 55.31, date_due: '2019/08/30', home_id: 2)
-Bill.create(name: 'Water', total: 22.56, date_due: '2019/08/30', home_id: 2)
+Bill.create(name: 'Rent', total: 1850, date_due: '2019/08/30', home_id: 2, img: '../app/assets/save-money.png')
+Bill.create(name: 'Gas', total: 35.90, date_due: '2019/08/30', home_id: 2, img: '../app/assets/gas.png')
+Bill.create(name: 'Electricity', total: 55.31, date_due: '2019/08/30', home_id: 2, img: '../app/assets/flash.png')
+Bill.create(name: 'Water', total: 22.56, date_due: '2019/08/30', home_id: 2, img: '../app/assets/drop.png')
 
-Bill.create(name: 'Rent', total: 8730, date_due: '2019/08/15', home_id: 3)
-Bill.create(name: 'Gas', total: 280.65, date_due: '2019/08/25', home_id: 3)
-Bill.create(name: 'Electricity', total: 330.67, date_due: '2019/08/05', home_id: 3)
-Bill.create(name: 'Water', total: 103.89, date_due: '2019/08/16', home_id: 3)
+Bill.create(name: 'Rent', total: 8730, date_due: '2019/08/15', home_id: 3, img: '../app/assets/save-money.png')
+Bill.create(name: 'Gas', total: 280.65, date_due: '2019/08/25', home_id: 3, img: '../app/assets/gas.png')
+Bill.create(name: 'Electricity', total: 330.67, date_due: '2019/08/05', home_id: 3, img: '../app/assets/flash.png')
+Bill.create(name: 'Water', total: 103.89, date_due: '2019/08/16', home_id: 3, img: '../app/assets/drop.png')
 
-Bill.create(name: 'Rent', total: 1200, date_due: '2019/08/20', home_id: 4)
-Bill.create(name: 'Gas', total: 30.90, date_due: '2019/08/23', home_id: 4)
-Bill.create(name: 'Electricity', total: 35.94, date_due: '2019/08/18', home_id: 4)
-Bill.create(name: 'Water', total: 25.90, date_due: '2019/08/29', home_id: 4)
+Bill.create(name: 'Rent', total: 1200, date_due: '2019/08/20', home_id: 4, img: '../app/assets/save-money.png')
+Bill.create(name: 'Gas', total: 30.90, date_due: '2019/08/23', home_id: 4, img: '../app/assets/gas.png')
+Bill.create(name: 'Electricity', total: 35.94, date_due: '2019/08/18', home_id: 4, img: '../app/assets/flash.png')
+Bill.create(name: 'Water', total: 25.90, date_due: '2019/08/29', home_id: 4, img: '../app/assets/drop.png')
 
 
 BillSplit.create(paid: false, amount: 525, bill_id: 1, user_id: 1)
@@ -71,10 +71,10 @@ BillSplit.create(paid: false, amount: 27.63, bill_id: 3, user_id: 4)
 BillSplit.create(paid: false, amount: 7.55, bill_id: 4, user_id: 4)
 
 
-Task.create(name: 'Laundry', description: 'Do the laundry', date_due: '2019/08/12', completed: false, home_id: 1, user_id: 1)
-Task.create(name: 'Hoover', description: 'Hoover the communal areas', date_due: '2019/08/07', completed: true, home_id: 1, user_id: 1)
-Task.create(name: 'Pets', description: 'Feed the pets', date_due: '2019/08/12', completed: true, home_id: 1, user_id:2)
-Task.create(name: 'Bins', description: 'Take out the rubbish', date_due: '2019/08/12', completed: false, home_id: 1, user_id:2)
+Task.create(name: 'Laundry', description: 'Do the laundry', date_due: '2019/08/12', completed: false, home_id: 1, user_id: 1, img: '../app/assets/washing-machine.png')
+Task.create(name: 'Hoover', description: 'Hoover the communal areas', date_due: '2019/08/07', completed: true, home_id: 1, user_id: 1, img: '../app/assets/vacuum-cleaner.png')
+Task.create(name: 'Pets', description: 'Feed the pets', date_due: '2019/08/12', completed: true, home_id: 1, user_id:2, img: '../app/assets/pet.png')
+Task.create(name: 'Bins', description: 'Take out the rubbish', date_due: '2019/08/12', completed: false, home_id: 1, user_id:2, img: '../app/assets/bin.png')
 
 
 Essential.create(name: 'Toilet roll', more: false, home_id: 1)
