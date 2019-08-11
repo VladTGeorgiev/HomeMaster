@@ -12,21 +12,21 @@ Home.create(name: 'House three', address_one: '10', address_two: 'Downing Street
 Home.create(name: 'House four', address_one: 'Buckingham Palace', address_two: 'Spur Road', city: 'London', postcode: 'SW1A 1AA ', home_key: '4')
 
 
-User.create(email:'vlad.georgiev@outlook.com', password:'1', first_name: 'Vlad', last_name: 'Georgiev', home_id: 1)
-User.create(email:'dilyana.georgieva85@gmail.com', password:'123', first_name: 'Didi', last_name: 'Georgieva', home_id: 1)
-User.create(email:'nicole.georgieva@outlook.com', password:'123', first_name: 'Nicole', last_name: 'Georgieva', home_id: 1)
-User.create(email:'alexander.georgiev@outlook.com', password:'123', first_name: 'Alex', last_name: 'Georgiev', home_id: 1)
+User.create(email:'vlad.georgiev@outlook.com', password:'1', first_name: 'Vlad', last_name: 'Georgiev', home_id: 1, cookie_policy: false)
+User.create(email:'dilyana.georgieva85@gmail.com', password:'123', first_name: 'Didi', last_name: 'Georgieva', home_id: 1, cookie_policy: false)
+User.create(email:'nicole.georgieva@outlook.com', password:'123', first_name: 'Nicole', last_name: 'Georgieva', home_id: 1, cookie_policy: false)
+User.create(email:'alexander.georgiev@outlook.com', password:'123', first_name: 'Alex', last_name: 'Georgiev', home_id: 1, cookie_policy: false)
 
-User.create(email:'mirela.sabeva@outlook.com', password:'123', first_name: 'Mirela', last_name: 'Sabeva', home_id: 2)
-User.create(email:'nikolai.sabev@outlook.com', password:'123', first_name: 'Nikolai', last_name: 'Sabev', home_id: 2)
+User.create(email:'mirela.sabeva@outlook.com', password:'123', first_name: 'Mirela', last_name: 'Sabeva', home_id: 2, cookie_policy: false)
+User.create(email:'nikolai.sabev@outlook.com', password:'123', first_name: 'Nikolai', last_name: 'Sabev', home_id: 2, cookie_policy: false)
 
-User.create(email:'a@a.com', password:'123', first_name: 'Ada', last_name: 'Ada', home_id: 3)
-User.create(email:'b@b.com', password:'123', first_name: 'Bob', last_name: 'Bob', home_id: 3)
-User.create(email:'c@c.com', password:'123', first_name: 'Catherine', last_name: 'Catherine', home_id: 3)
+User.create(email:'a@a.com', password:'123', first_name: 'Ada', last_name: 'Ada', home_id: 3, cookie_policy: false)
+User.create(email:'b@b.com', password:'123', first_name: 'Bob', last_name: 'Bob', home_id: 3, cookie_policy: false)
+User.create(email:'c@c.com', password:'123', first_name: 'Catherine', last_name: 'Catherine', home_id: 3, cookie_policy: false)
 
-User.create(email:'d@d.com', password:'123', first_name: 'Dan', last_name: 'Dan', home_id: 4)
-User.create(email:'e@e.com', password:'123', first_name: 'Elizabeth', last_name: 'Elizabeth', home_id: 4)
-User.create(email:'f@f.com', password:'123', first_name: 'Felix', last_name: 'Felix', home_id: 4)
+User.create(email:'d@d.com', password:'123', first_name: 'Dan', last_name: 'Dan', home_id: 4, cookie_policy: false)
+User.create(email:'e@e.com', password:'123', first_name: 'Elizabeth', last_name: 'Elizabeth', home_id: 4, cookie_policy: false)
+User.create(email:'f@f.com', password:'123', first_name: 'Felix', last_name: 'Felix', home_id: 4, cookie_policy: false)
 
 
 Bill.create(name: 'Rent', total: 2100, date_due: '2019/08/28', home_id: 1, img: '../app/assets/save-money.png')
@@ -71,10 +71,10 @@ BillSplit.create(paid: false, amount: 27.63, bill_id: 3, user_id: 4)
 BillSplit.create(paid: false, amount: 7.55, bill_id: 4, user_id: 4)
 
 
-Task.create(name: 'Laundry', description: 'Do the laundry', date_due: '2019/08/12', completed: false, home_id: 1, user_id: 1, img: '../app/assets/washing-machine.png')
-Task.create(name: 'Hoover', description: 'Hoover the communal areas', date_due: '2019/08/07', completed: true, home_id: 1, user_id: 1, img: '../app/assets/vacuum-cleaner.png')
-Task.create(name: 'Pets', description: 'Feed the pets', date_due: '2019/08/12', completed: true, home_id: 1, user_id:2, img: '../app/assets/pet.png')
-Task.create(name: 'Bins', description: 'Take out the rubbish', date_due: '2019/08/12', completed: false, home_id: 1, user_id:2, img: '../app/assets/bin.png')
+Task.create(name: 'Laundry', description: 'Do the laundry', day: 'Friday', completed: false, home_id: 1, user_id: 1, img: '../app/assets/washing-machine.png')
+Task.create(name: 'Hoover', description: 'Hoover the communal areas', day: 'Monday', completed: true, home_id: 1, user_id: 1, img: '../app/assets/vacuum-cleaner.png')
+Task.create(name: 'Pets', description: 'Feed the pets', day: 'Tuesday', completed: true, home_id: 1, user_id:2, img: '../app/assets/pet.png')
+Task.create(name: 'Bins', description: 'Take out the rubbish', day: 'Saturday', completed: false, home_id: 1, user_id:2, img: '../app/assets/bin.png')
 
 
 Essential.create(name: 'Toilet roll', more: false, home_id: 1)

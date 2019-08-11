@@ -25,6 +25,9 @@ class Api::V1::AuthController < ApplicationController
         current_tasks = Task.all.select do |task|
             task.user_id === user.id
         end
+        all_current_tasks = Task.all.select do |task|
+            task.home_id === current_home.id
+        end
         current_essentials = Essential.all.select do |essentail|
             essentail.home_id === user.home.id
         end
@@ -35,6 +38,7 @@ class Api::V1::AuthController < ApplicationController
                 bills: current_bills,
                 bill_splits: current_bill_splits,
                 tasks: current_tasks,
+                all_tasks: all_current_tasks,
                 essentials: current_essentials
             }
         else

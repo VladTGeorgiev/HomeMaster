@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_141015) do
+ActiveRecord::Schema.define(version: 2019_08_11_133005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,12 +82,12 @@ ActiveRecord::Schema.define(version: 2019_08_06_141015) do
     t.string "name"
     t.string "description"
     t.string "img"
-    t.date "date_due"
     t.boolean "completed"
     t.bigint "home_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "day"
     t.index ["home_id"], name: "index_tasks_on_home_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_141015) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar"
+    t.boolean "cookie_policy"
     t.index ["home_id"], name: "index_users_on_home_id"
   end
 

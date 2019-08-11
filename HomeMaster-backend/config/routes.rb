@@ -8,7 +8,7 @@ Rails.application.routes.draw do
         get '/data', to: 'auth#data'
         # resources :bills
         # resources :billsplits
-        # resources :tasks
+        resources :tasks
         resources :essentials
     end
   end
