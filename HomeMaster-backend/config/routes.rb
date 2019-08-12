@@ -7,7 +7,7 @@ Rails.application.routes.draw do
         get '/validate', to: 'auth#validate'
         get '/data', to: 'auth#data'
         # resources :bills
-        # resources :billsplits
+        resources :billsplits
         resources :tasks
         resources :essentials
     end

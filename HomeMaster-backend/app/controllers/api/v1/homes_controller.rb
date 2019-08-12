@@ -11,6 +11,12 @@ class Api::V1::HomesController < ApplicationController
         end
     end
 
+    def update
+        home = Home.find(params[:id])
+        home.update(home_params)
+            render json: { home: HomeSerializer.new(home), token: issue_token(user_id: @current_user.id)}, status: :created
+    end
+
     def index
         render json: Home.all
     end
@@ -20,14 +26,9 @@ class Api::V1::HomesController < ApplicationController
         render json: { home: HomeSerializer.new(home) }
     end
 
-    # def current_home
-    #     home = User.find(set_current_user[:id]).home
-    #     render json: home, except: [:updated_at, :created_at]
-    # end
-
     private
 
     def home_params
-        params.require(:post).permit(:name, :address_one, :address_two, :city, :postcode, :home_key)
+        params.require(:home).permit(:name, :address_one, :address_two, :city, :postcode, :home_key)
     end
 end
