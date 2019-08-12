@@ -6,7 +6,7 @@ Rails.application.routes.draw do
         post '/login', to: 'auth#create'
         get '/validate', to: 'auth#validate'
         get '/data', to: 'auth#data'
-        # resources :bills
+        resources :bills
         resources :billsplits
         resources :tasks
         resources :essentials
