@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   belongs_to :home
-  has_many :billsplits, dependent: :destroy 
-  has_many :bills, through: :billsplits
+  has_many :bill_splits, dependent: :destroy 
+  has_many :bills, through: :bill_splits
   has_many :tasks
   has_secure_password
   # has_one_attached :avatar
@@ -10,6 +10,7 @@ class User < ApplicationRecord
   # validates :first_name, length: { minimum: 3 }
   # validates :last_name, length: { minimum: 3 }
   # validates :password, length: {minimum: 3}
+  default_scope -> { order(id: :asc) }
 
   # def default_image
   #   self.avatar.attach(io: File.open(Rails.root.join('app','assets','default_image.png')), filename: 'default-image.png', content_type: 'image/png')

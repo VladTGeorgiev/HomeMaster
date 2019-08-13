@@ -3,5 +3,6 @@ class Home < ApplicationRecord
     has_many :bills
     has_many :tasks
     has_many :essentials
-    has_many :billsplits, through: :bills
+    has_many :bill_splits, through: :bills
+    default_scope -> { order(id: :asc) }
 end

@@ -12,40 +12,17 @@ class Api::V1::AuthController < ApplicationController
 
     def data
         user = @current_user
-        current_home = User.find(user.id).home
-        current_users = User.all.select do |current_user| 
-            current_user.home_id === user.home.id
-        end
-        current_bills = Bill.all.select do |bill| 
-            bill.home_id === user.home.id
-        end
-        current_bill_splits = BillSplit.all.select do |billsplit| 
-            billsplit.user_id === user.id
-        end
-        all_bill_splits = BillSplit.all.select do |bill_split|
-            current_bills.select do |current_bill|
-                current_bill.id === bill_split.bill_id
-            end
-        end
-        current_tasks = Task.all.select do |task|
-            task.user_id === user.id
-        end
-        all_current_tasks = Task.all.select do |task|
-            task.home_id === current_home.id
-        end
-        current_essentials = Essential.all.select do |essentail|
-            essentail.home_id === user.home.id
-        end
+        current_home = @current_user.home
         if user
             render json: {
                 home: current_home,
-                users: current_users,
-                bills: current_bills,
-                bill_splits: current_bill_splits,
-                tasks: current_tasks,
-                all_tasks: all_current_tasks,
-                all_bill_splits: all_bill_splits,
-                essentials: current_essentials
+                users: current_home.users,
+                bills: current_home.bills,
+                bill_splits: user.bill_splits,
+                tasks: user.tasks,
+                all_tasks: current_home.tasks,
+                all_bill_splits: current_home.bill_splits,
+                essentials: current_home.essentials
             }
         else
             render json: {error: "Data Not Avaliable"}
