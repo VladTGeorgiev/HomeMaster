@@ -5,13 +5,13 @@ class Api::V1::BillsplitsController < ApplicationController
 
     def create
         bill_split = BillSplit.create(bill_split_params)
-        render json: { bill_split: BillSplitSerializer.new(bill_split)}
+        render json: { bill_split: BillsplitSerializer.new(bill_split)}
     end
 
     def show
         bill_split = BillSplit.find_by(id: params[:id])
         if bill_split 
-            render json: {bill_split: BillSplitSerializer.new(bill_split)}
+            render json: {bill_split: BillsplitSerializer.new(bill_split)}
         else
             render plain: "This bill_split doesn't exist"
         end
@@ -30,6 +30,6 @@ class Api::V1::BillsplitsController < ApplicationController
     private
 
     def bill_split_params
-        params.require(:bill_split).permit(:paid, :amount, :home_id, :user_id)
+        params.require(:bill_split).permit(:paid, :amount, :bill_id, :user_id)
     end
 end

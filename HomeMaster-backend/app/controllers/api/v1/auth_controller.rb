@@ -22,6 +22,11 @@ class Api::V1::AuthController < ApplicationController
         current_bill_splits = BillSplit.all.select do |billsplit| 
             billsplit.user_id === user.id
         end
+        all_bill_splits = BillSplit.all.select do |bill_split|
+            current_bills.select do |current_bill|
+                current_bill.id === bill_split.bill_id
+            end
+        end
         current_tasks = Task.all.select do |task|
             task.user_id === user.id
         end
@@ -39,6 +44,7 @@ class Api::V1::AuthController < ApplicationController
                 bill_splits: current_bill_splits,
                 tasks: current_tasks,
                 all_tasks: all_current_tasks,
+                all_bill_splits: all_bill_splits,
                 essentials: current_essentials
             }
         else
