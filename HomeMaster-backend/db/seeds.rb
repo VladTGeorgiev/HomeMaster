@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Home.create(name: 'Home', address_one: '6', address_two: 'Hurst Avenue', city: 'London', postcode: 'E4 8DW', home_key: '55')
-# Home.create(name: 'House two', address_one: '118', address_two: 'Erskine Road', city: 'London', postcode: 'E17 6SA', home_key: '102')
+Home.create(name: 'House two', address_one: '118', address_two: 'Erskine Road', city: 'London', postcode: 'E17 6SA', home_key: '102')
 # Home.create(name: 'House three', address_one: '10', address_two: 'Downing Street', city: 'London', postcode: 'SW1A 2AA', home_key: '306')
 # Home.create(name: 'House four', address_one: 'Buckingham Palace', address_two: 'Spur Road', city: 'London', postcode: 'SW1A 1AA ', home_key: '33')
 
 
-User.create(email:'vlad.georgiev@outlook.com', password:'1', first_name: 'Vlad', last_name: 'Georgiev', home_id: 1, cookie_policy: false)
+# User.create(email:'vlad.georgiev@outlook.com', password:'1', first_name: 'Vlad', last_name: 'Georgiev', home_id: 1, cookie_policy: false)
 # User.create(email:'dilyana.georgieva85@gmail.com', password:'123', first_name: 'Didi', last_name: 'Georgieva', home_id: 1, cookie_policy: false)
 # User.create(email:'nicole.georgieva@outlook.com', password:'123', first_name: 'Nicole', last_name: 'Georgieva', home_id: 1, cookie_policy: false)
 # User.create(email:'alexander.georgiev@outlook.com', password:'123', first_name: 'Alex', last_name: 'Georgiev', home_id: 1, cookie_policy: false)
