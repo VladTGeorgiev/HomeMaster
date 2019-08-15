@@ -2,13 +2,7 @@ class Api::V1::HomesController < ApplicationController
 
     def create
         home = Home.create(home_params)
-        home.user = @set_current_user
-        if home.valid?
-            home.save
             render json: home, status: :created
-        else
-            render json: { errors: home.errors.full_messages }, status: :not_accepted
-        end
     end
 
     def update
