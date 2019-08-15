@@ -8,7 +8,7 @@
 
 Home.create(name: '', address_one: '', address_two: '', city: '', postcode: '', home_key: '')
 Home.create(name: 'Home', address_one: '6', address_two: 'Hurst Avenue', city: 'London', postcode: 'E4 8DW', home_key: '55')
-Home.create(name: 'House two', address_one: '118', address_two: 'Erskine Road', city: 'London', postcode: 'E17 6SA', home_key: '102')
+# Home.create(name: 'House two', address_one: '118', address_two: 'Erskine Road', city: 'London', postcode: 'E17 6SA', home_key: '102')
 # Home.create(name: 'House three', address_one: '10', address_two: 'Downing Street', city: 'London', postcode: 'SW1A 2AA', home_key: '306')
 # Home.create(name: 'House four', address_one: 'Buckingham Palace', address_two: 'Spur Road', city: 'London', postcode: 'SW1A 1AA ', home_key: '33')
 
