@@ -4,6 +4,7 @@ class Api::V1::BillsplitsController < ApplicationController
     end
 
     def create
+        # byebug
         bill_split = BillSplit.create(bill_split_params)
         render json: { bill_split: BillsplitSerializer.new(bill_split)}
     end
