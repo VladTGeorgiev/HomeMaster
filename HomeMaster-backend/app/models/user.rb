@@ -6,10 +6,10 @@ class User < ApplicationRecord
   has_secure_password
   # has_one_attached :avatar
   # before_create :default_image
-  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true
   # validates :first_name, length: { minimum: 3 }
   # validates :last_name, length: { minimum: 3 }
-  # validates :password, length: {minimum: 3}
+  # validates :password, length: {minimum: 3}, on: :create
   default_scope -> { order(id: :asc) }
 
   # def default_image

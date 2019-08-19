@@ -20,8 +20,7 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def update
-        if @current_user.id === params[:id].to_i
-            @current_user.update(user_params)
+        if @current_user.id === params[:id].to_i && @current_user.update(user_params)
             render json: { user: UserSerializer.new(@current_user), token: issue_token(user_id: @current_user.id)}, status: :created
         else
           render json: { errors: @current_user.errors.full_messages }, status: :not_accepted
