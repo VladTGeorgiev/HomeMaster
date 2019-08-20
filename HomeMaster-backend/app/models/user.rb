@@ -7,12 +7,12 @@ class User < ApplicationRecord
   # has_one_attached :avatar
   # before_create :default_image
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true
-  # validates :first_name, length: { minimum: 3 }
-  # validates :last_name, length: { minimum: 3 }
+  # validates :first_name, length: { minimum: 3 }, on: :create
+  # validates :last_name, length: { minimum: 3 }, on: :create
   # validates :password, length: {minimum: 3}, on: :create
   default_scope -> { order(id: :asc) }
 
   # def default_image
-  #   self.avatar.attach(io: File.open(Rails.root.join('app','assets','default_image.png')), filename: 'default-image.png', content_type: 'image/png')
+  #   self.avatar.attach(io: File.open(Rails.root.join('app','assets','default_image.png')), filename: 'default_image.png', content_type: 'image/png')
   # end
 end
