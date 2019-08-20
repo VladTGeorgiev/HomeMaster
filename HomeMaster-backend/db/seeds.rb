@@ -7,4 +7,3 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Home.create(name: '', address_one: '', address_two: '', city: '', postcode: '', home_key: '402e5080d6c6f371')
-# 960c1f267c05af42 
