@@ -17,6 +17,6 @@ class Api::V1::BillsController < ApplicationController
     private 
 
     def bill_params
-        params.require(:bill).permit(:id, :name, :total, :date_due, :home_id, :img, :provider)
+        params.require(:bill).permit(:id, :name, :total, :date_due, :home_id, :img)
     end
 end
